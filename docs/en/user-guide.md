@@ -96,10 +96,13 @@ curl -X POST http://192.168.4.1/api/config \
 #### Device Configuration
 
 | Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
 | `device_name` | string | `"MiBee Cam"` | Device name |
 
 #### Upload Method Configuration
 
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
 | `upload_method` | uint8 | `0` | Upload method: 0=Disabled, 1=WebDAV, 2=HTTP(S) |
 | `upload_base_path` | string | `"/MiBee Cam"` | Upload base path |
 | `webdav_url` | string | `""` | WebDAV server URL |
@@ -114,6 +117,7 @@ curl -X POST http://192.168.4.1/api/config \
 #### Camera Configuration
 
 | Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
 | `vflip` | bool | `false` | Vertical flip |
 | `hmirror` | bool | `false` | Horizontal mirror |
 #### Video Configuration
@@ -185,7 +189,7 @@ Each webhook sends JSON payload:
 The onboard LED (GPIO21, active-low) reflects the device's current status through different blinking patterns:
 
 | Mode | LED Behavior | Meaning |
-|------|-------------|---------|
+|------|--------------|---------|
 | LED_STARTING | Solid | System booting |
 | LED_AP_MODE | Slow blink (1-second cycle) | AP hotspot mode, waiting for configuration |
 | LED_WIFI_CONNECTING | Fast blink (200ms cycle) | Connecting to WiFi |
